@@ -4,9 +4,11 @@ postgres_data/
 n8n_data/
 redis_data/
 
-# Ignorar logs do Airflow 
+# Ignorar arquivos do Airflow 
 logs/
 __pycache__/
+config/
+airflow.cfg
 
 # Ignorar arquivos de ambiente com senhas
 .env

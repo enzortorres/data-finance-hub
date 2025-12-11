@@ -70,7 +70,7 @@ default_args = {
 with DAG(
     'data_elt_dolar',
     default_args=default_args,
-    schedule_interval='@hourly', # roda toda hora
+    schedule_interval='10 * * * *', # roda toda hora no minuto 10.
     catchup=False
 ) as dag:
 
