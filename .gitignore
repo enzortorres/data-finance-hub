@@ -1,1 +1,15 @@
-.dist
+# Ignorar pastas de dados dos Volumes do Docker
+minio_data/
+postgres_data/
+n8n_data/
+redis_data/
+
+# Ignorar logs do Airflow 
+logs/
+__pycache__/
+
+# Ignorar arquivos de ambiente com senhas
+.env
+
+# Ignorar arquivos de ambientes virtuais
+venv/
