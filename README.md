@@ -43,7 +43,7 @@ Certifique-se de ter instalado:
 
 - Suba o ambiente:
 ```bash
-    docker-compose up -d
+    docker compose up -d
 ```
 - Aguarde alguns minutos na primeira execução para que o Airflow realize as migrações do banco.
 
