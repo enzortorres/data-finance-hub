@@ -1,6 +1,6 @@
 # 💸 Data Finance Hub: Pipeline ELT End-to-End
 
-Uma solução de Engenharia de Dados para o acompanhamento automatizado do câmbio. Este projeto utiliza uma abordagem Data Lakehouse para ingerir, armazenar e estruturar dados históricos do Dólar, permitindo o monitoramento de volatilidade e variações de preço através de um fluxo ELT robusto.
+Projeto feito para o acompanhamento automatizado do câmbio. Este projeto utiliza uma abordagem Data Lakehouse para ingerir, armazenar e estruturar dados históricos do Dólar, permitindo o monitoramento de volatilidade e variações de preço através de um fluxo ELT robusto.
 
 ## 🏗 Arquitetura do Projeto
 
