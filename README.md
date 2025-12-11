@@ -103,9 +103,9 @@ Adicione o nó Schedule Trigger.
 #### Passo 2: Buscar Dados (HTTP Request)
 
 - Adicione o nó HTTP Request.
-- **Method**: GET
-- **URL**: https://economia.awesomeapi.com.br/last/USD-BRL
-- **Authentication**: None
+- **Method**: ```GET```
+- **URL**: ```https://economia.awesomeapi.com.br/last/USD-BRL```
+- **Authentication**: ```None```
 - Clique em Execute Node para garantir que o JSON chegou.
 
 ex: 
@@ -125,7 +125,7 @@ ex:
 #### Passo 4: Configurar Credencial MinIO
 Se ainda não configurou:
 
-- Vá em Credentials > Add Credential.
+- Vá em ```Credentials``` > ```Add Credential.```
 - Escolha ```S3```.
 - **Region**: ```us-east-1.```
 - **Access Key ID**: ```minioadmin```
