@@ -8,6 +8,7 @@ redis_data/
 logs/
 __pycache__/
 config/
+plugins/
 airflow.cfg
 
 # Ignorar arquivos de ambiente com senhas
