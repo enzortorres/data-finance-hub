@@ -34,6 +34,7 @@ def process_data_and_load():
     
     cotacao = json_data.get('USDBRL', {})
     valor_compra = cotacao.get('bid')
+    variacao = cotacao.get('varBid')
     data_hora = cotacao.get('create_date')
     
     if not valor_compra:
@@ -48,6 +49,7 @@ def process_data_and_load():
         CREATE TABLE IF NOT EXISTS cotacao_dolar (
             id SERIAL PRIMARY KEY,
             valor DECIMAL(10, 4),
+            variacao DECIMAL(10, 5),
             data_referencia TIMESTAMP,
             data_ingestao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
@@ -55,10 +57,10 @@ def process_data_and_load():
     pg_hook.run(create_table_sql)
     
     insert_sql = """
-        INSERT INTO cotacao_dolar (valor, data_referencia)
-        VALUES (%s, %s);
+        INSERT INTO cotacao_dolar (valor, data_referencia, variacao)
+        VALUES (%s, %s, %s);
     """
-    pg_hook.run(insert_sql, parameters=(valor_compra, data_hora))
+    pg_hook.run(insert_sql, parameters=(valor_compra, data_hora, variacao))
         
 default_args = {
     'owner': 'airflow',
