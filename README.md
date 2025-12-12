@@ -1,6 +1,6 @@
 # 💸 Data Finance Hub: Pipeline ELT End-to-End
 
-Uma solução de Engenharia de Dados para o acompanhamento automatizado do câmbio. Este projeto utiliza uma abordagem Data Lakehouse para ingerir, armazenar e estruturar dados históricos do Dólar, permitindo o monitoramento de volatilidade e variações de preço através de um fluxo ELT robusto.
+Projeto feito para o acompanhamento automatizado do câmbio. Este projeto utiliza uma abordagem Data Lakehouse para ingerir, armazenar e estruturar dados históricos do Dólar, permitindo o monitoramento de volatilidade e variações de preço através de um fluxo ELT robusto.
 
 ## 🏗 Arquitetura do Projeto
 
@@ -43,7 +43,7 @@ Certifique-se de ter instalado:
 
 - Suba o ambiente:
 ```bash
-    docker-compose up -d
+    docker compose up -d
 ```
 - Aguarde alguns minutos na primeira execução para que o Airflow realize as migrações do banco.
 
@@ -103,9 +103,9 @@ Adicione o nó Schedule Trigger.
 #### Passo 2: Buscar Dados (HTTP Request)
 
 - Adicione o nó HTTP Request.
-- **Method**: GET
-- **URL**: https://economia.awesomeapi.com.br/last/USD-BRL
-- **Authentication**: None
+- **Method**: ```GET```
+- **URL**: ```https://economia.awesomeapi.com.br/last/USD-BRL```
+- **Authentication**: ```None```
 - Clique em Execute Node para garantir que o JSON chegou.
 
 ex: 
@@ -125,7 +125,7 @@ ex:
 #### Passo 4: Configurar Credencial MinIO
 Se ainda não configurou:
 
-- Vá em Credentials > Add Credential.
+- Vá em ```Credentials``` > ```Add Credential.```
 - Escolha ```S3```.
 - **Region**: ```us-east-1.```
 - **Access Key ID**: ```minioadmin```
